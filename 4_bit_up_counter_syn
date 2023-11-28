@@ -1,0 +1,29 @@
+///100 Days of RTL///
+
+///Abilash P///
+
+///4 BIT - Up counter with synchronous reset///
+
+module up_counter (CLK, RST, Up_Counter);
+  
+  input  CLK, RST;
+  output reg [3:0] Up_Counter;
+  
+  always @ (posedge CLK)
+    begin
+      if(RST)
+        begin
+          Up_Counter = 4'd0;
+        end
+      else
+        begin
+          Up_Counter = Up_Counter + 4'd1;
+        end
+    end
+  
+endmodule
+
+      
+    
+  
+  
